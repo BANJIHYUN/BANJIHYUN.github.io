@@ -303,8 +303,8 @@
 								<div class="timeline-centered">
 									<!-- 파이널 프로젝트 -->
 									<article class="timeline-entry animate-box"
-										data-animate-effect="fadeInRight">
-										<div class="timeline-entry-inner">
+									data-animate-effect="fadeInRight">
+									<div class="timeline-entry-inner">
 
 											<div class="timeline-icon color-1">
 												<i class="icon-pen1"></i>
@@ -336,24 +336,24 @@
 													
 													<br>
 													<strong>회원</strong><br>
-													<strong>[로고 및 내부 디자인]</strong><br>
-													- 안드로이드 스튜디오 내 아이콘 사용<br>
-
+													<br>
 													<strong>[로그인]</strong><br>
 													- 아이디, 비밀번호 입력 후 로그인 가능<br>
-													- 비회원 전용, 회원 가입 버튼 클릭 시 해당화면 이동<br>
+													- 내부 DB에 MemberID와 MemberPW의 존재 여부를 통해 로그인 가능<br>
 
 													<strong>[메인]</strong><br>
-													- 로그아웃 버튼 클릭 시 로그인 화면으로 이동<br>
-													- 중안 로고 버튼 클릭 시 카테고리 별 식당 선택 화면으로 이동<br>
-													- 하단 내비게이션 바 즐겨찾기, 홈, 랜덤 게임 클릭 시 해당 화면으로 이동<br>
+													- 로그아웃 버튼 클릭 시 Intent 객체 송신 액티비티를 사용하여 로그아웃 되며 finishAffinity() 사용하여 모든 Activity 종료
+													- 하단 내비게이션 바를 생성하여 각 화면으로 이동<br>
 
 													<strong>[카테고리 별 식당 선택]</strong><br>
 													- 카테고리 별 식당 선택 가능<br>
-													- 카테고리 별 식당 선택 후 원하는 식사 종류 선택 시 식당 무작위 화면으로 이동<br>
+													- 카테고리 버튼 클릭 시 카테고리에 해당 되는 버튼을 VISIBLE, GONE를 사용하여 VIew에 표시<br>
+													- KaKao Map REST API의 키워드 검색 엔드포인트를 활용하여 각 카테고리 별 버튼 클릭 시 식당 리스트 출력<br>
+													<br>
 													
 													<strong>[무작위 식당 선택]</strong><br>
-													- KAKAO MAP API를 활용하여 현재 위치의 반경 500m 식당 리스트 출력<br>
+													- Kakao Map API를 사용하여 현재 위치의 반경 500m 식당 리스트 출력<br>
+													- if, else문으로 설정된 키워드의 식당 리스트 출력 <br>
 													- 랜덤 식당 뽑기 버튼 클릭 시 스크롤 후 1.5초 후 선택 됨<br>
 
 													<strong>[카테고리 별 식당 선택]</strong><br>
@@ -366,23 +366,28 @@
 													- 회원 전용으로 회원만 사용 가능<br>
 													- 즐겨 찾기 된 식당 이름, 주소가 표시<br>
 													- 삭제, 공유 가능<br>
-													- 가게 정보 클릭 시 카카오 맵으로 이동 하며 선택 된 가게 정보가 표시<br><br>
+													- 가게 정보 클릭 시 카카오 맵으로 이동 하며 선택 된 가게 정보가 표시<br>
 
+													<strong>[공유]</strong><br>
+													- 메세징 객체를 사용하여 식당의 이름, 주소, URL의 텍스트를 다른 기기로 공유 가능<br>
+													
+													<br>
 													<strong>비회원</strong><br>
 													<strong>[메인]</strong><br>
 													- 회원 가입 버튼 클릭 시 회원가입 화면으로 이동<br>
 													- 중앙 로고 버튼 클릭 시 카테고리 별 식당 선택 화면으로 이동<br>
-													- 하단 내비게이션 바 즐겨 찾기, 홈, 랜덤 게임 클릭 시 해당 화면으로 이동<br>
+													- 하단 내비게이션 바를 생성하여 각 화면으로 이동<br>
 
 													<strong>[무작위 식당 선택]</strong><br>
-													- KAKAO MAP API를 활용하여 현재 위치의 반경 500m 식당 리스트 출력<br>
-													- 랜덤 식당 뽑기 버튼 클릭 시 스크롤 후 1.5초 후 선택 됨<br>
+													- KaKao Map API를 사용하여 현재 위치의 반경 500m 식당 리스트 출력<br>
+													- if, else문으로 설정된 키워드의 식당 리스트 출력 <br>
+													- 랜덤 식당 뽑기 버튼 클릭 시 스크롤 후 1.3초 후 선택 됨<br>
 
 													<strong>[선택된 식당 정보]</strong><br>
 													- 선택 된 식당 정보인 식당 이름, 주소 출력<br>
 													- 한번 더 버튼 클릭 시 무작위 식당 선택 됨<br>
 													- 결정 버튼 클릭 시 카카오 맵으로 이동 하며 선택된 식당 정보가 나타남<br>
-													- 공유 가능<br>
+													- 메세징 객체를 사용하여 식당의 이름, 주소, URL의 텍스트를 다른 기기로 공유 가능<br>
 												</p>
 
 												<p>
